@@ -1,8 +1,9 @@
 import { Component } from "react";
 
-class MainBody extends Component {
+class GamePreview extends Component {
 
 
+	
 	render(): JSX.Element {
 		return (
 			<p></p>
