@@ -1,9 +1,13 @@
+import React from "react";
 import { Component } from "react";
+import { Button } from "@material-ui/core";
 
-class Sidebar extends Component {
 
-	//TODO
-	private static readonly RESUME_LINK = "";
+export interface ISidebarProps {
+	resumeLink: string;
+}
+
+export default class Sidebar extends Component<ISidebarProps> {
 
 	render(): JSX.Element {
 		return (
@@ -13,8 +17,7 @@ class Sidebar extends Component {
 				<p>alice.ava.moh@gmail.com</p>
 				<Button
 					variant="outlined"
-					className={classes.button}
-					onClick={() => {window.open(Sidebar.RESUME_LINK)}}
+					onClick={() => {window.open(this.props.resumeLink)}}
 				>
 					<p>Resume</p>
 				</Button>

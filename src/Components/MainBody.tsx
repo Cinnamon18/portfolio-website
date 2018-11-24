@@ -1,11 +1,15 @@
+import React from "react";
 import { Component } from "react";
+import GameList from "./GameList";
 
-class MainBody extends Component {
+export default class MainBody extends Component {
 
 
 	render(): JSX.Element {
 		return (
-			<p></p>
+			<div>
+				<GameList />
+			</div>
 		);
 	}
 }

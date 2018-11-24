@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import './App.css';
 import { Grid } from '@material-ui/core';
-import classes from '*.module.css';
+import Sidebar from './Components/Sidebar';
+import MainBody from './Components/MainBody';
 
 class App extends Component {
+
+	//TODO
+	private static readonly RESUME_LINK = "TODO";
+
+
 	render(): JSX.Element {
 		return (
 			<div className="App">
@@ -16,12 +22,12 @@ class App extends Component {
 						direction="row"
 						justify="space-between"
 						alignItems="flex-start"
-						className={classes.root}
 						spacing={16}>
-
 						{/*TODO: do this differently on mobile. . make it reponsive */}
 						<Grid item xs={3}>
-							<Sidebar />
+							<Sidebar
+								resumeLink = {App.RESUME_LINK}
+							/>
 						</Grid>
 						<Grid item xs={9}>
 							<MainBody />

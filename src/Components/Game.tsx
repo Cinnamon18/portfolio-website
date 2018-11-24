@@ -1,29 +1,17 @@
-import { Component } from "react";
+import React, { Component } from "react";
+import LinkButton, { ILinkButtonProps } from "./LinkButton";
+import GamePreview, { IGamePreviewProps } from "./GamePreview";
 
-class Game extends Component {
-
-	private description: string[];
+export interface IGameProps {
+	description: string[];
 	// private tags?: Tag[]; //I may come back to the idea of tags. or not!
-	private link: LinkButton;
-	private preview: GamePreview[]; //Media preview 
-	private date: string;
-	private name: string;
+	link: ILinkButtonProps;
+	preview: IGamePreviewProps; //Media preview. Screen shots, trailers, gameplay, etc.
+	date: string;
+	name: string;
+}
 
-	public Game(
-		description: string[],
-		link: LinkButton,
-		preview: GamePreview, 
-		date: string,
-		name: string
-	) {
-		this.description = description;
-		this.link = link;
-		this.preview = preview;
-		this.date = date;
-		this.name = name;
-	}
-
-
+export default class Game extends Component<IGameProps> {
 
 	render(): JSX.Element {
 		return (

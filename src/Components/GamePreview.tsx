@@ -1,6 +1,11 @@
+import React from "react";
 import { Component } from "react";
 
-class GamePreview extends Component {
+export interface IGamePreviewProps {
+	
+}
+
+export default class GamePreview extends Component<IGamePreviewProps> {
 
 
 	

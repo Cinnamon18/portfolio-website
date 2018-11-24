@@ -1,19 +1,31 @@
+import React from "react";
 import { Component } from "react";
+import Game, { IGameProps } from "./Game";
 
-class GameList extends Component {
+export default class GameList extends Component {
 
-	private gameList: Game[] = [
+	private gameListProps: IGameProps[] = [
 		GameList.pathToHarmony,
 	]
 
-
 	render(): JSX.Element[] {
 		return (
-			this.gameList
+			this.gameListProps.map(gameProps => React.createElement(Game, gameProps, null))
 		);
 	}
 
-	private static pathToHarmony: Game = {
+	private static readonly pathToHarmony: IGameProps = {
+		description: [
+			"Lead a team of 20 to create a turn based tactics game",
+			"asdf",
+		],
+		link: {
+			destination: "vgdev.org"
+		},
+		preview: {
 
-	}
+		},
+		date: "December 2018",
+		name: "Path to Harmony",
+	};
 }

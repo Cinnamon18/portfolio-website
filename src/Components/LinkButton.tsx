@@ -1,25 +1,23 @@
+import React from "react";
 import { Component } from "react";
 import { Button } from "@material-ui/core";
 
-class LinkButton extends Component {
+export interface ILinkButtonProps {
+	linkText?: string;
+	destination: string;
+}
+
+export default class LinkButton extends Component<ILinkButtonProps> {
 
 	static readonly DEFAULT_TEXT = "Download";
 
-	private linkText: string;
-	private destination: string;
-
-	public LinkButton(
-		destination: string,
-		linkText?: string,
-	) {
-		this.destination = destination;
-		this.linkText = (linkText) ? linkText : LinkButton.DEFAULT_TEXT;
-	}
-
 	render(): JSX.Element {
+
+		let linkText: string = (this.props.linkText) ? this.props.linkText : LinkButton.DEFAULT_TEXT;
+
 		return (
-			<Button variant="contained" href={this.destination} className={classes.button}>
-				<p>{this.linkText}</p>
+			<Button variant="contained" href={this.props.destination}>
+				<p>{linkText}</p>
 		  	</Button>
 		);
 	}
