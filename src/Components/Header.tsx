@@ -1,7 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import { Button } from "@material-ui/core";
-
+import styles from './Header.module.scss';
 
 export interface IHeaderProps {
 	resumeLink: string;
@@ -13,10 +13,10 @@ export default class Header extends Component<IHeaderProps> {
 		return (
 			<div>
 				<h2>Alice Kalok</h2>
-				<ul className="HeaderList">
+				<ul className={styles.HeaderList}>
 					<li>(415)-562-0259</li>
 					<li>alice.ava.moh@gmail.com</li>
-					<div className="Links">
+					<div className={styles.Links}>
 						<Button
 							variant="outlined"
 							onClick={() => { window.open(this.props.resumeLink) }}

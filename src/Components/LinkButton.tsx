@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import { Button } from "@material-ui/core";
+import styles from './LinkButton.module.scss';
 
 export interface ILinkButtonProps {
 	linkText?: string;

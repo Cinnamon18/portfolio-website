@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import LinkButton, { ILinkButtonProps } from "./LinkButton";
 import GamePreview, { IGamePreviewProps } from "./GamePreview";
 import { Grid } from "@material-ui/core";
+import styles from './Game.module.scss';
 
 export interface IGameProps {
 	description: string[];
@@ -19,7 +20,7 @@ export default class Game extends Component<IGameProps> {
 		return (
 			<Grid
 				container
-				className="Game"
+				className={styles.Game}
 				direction="row"
 				justify="center"
 				alignItems="flex-start"
@@ -36,15 +37,15 @@ export default class Game extends Component<IGameProps> {
 						direction="row"
 						justify="space-between"
 						alignItems="flex-start"
-						className="GameDescription"
+						className={styles.GameDescription}
 					>
-						<Grid className="GameName" item xs={8}>
+						<Grid className={styles.GameName} item xs={8}>
 							<p >{this.props.name}</p>
 						</Grid>
-						<Grid className="GameDate" item xs={4}>
+						<Grid className={styles.GameDate} item xs={4}>
 							<p >{this.props.date}</p>
 						</Grid>
-						<Grid className="GameDescription" item xs={12}>
+						<Grid className={styles.GameDescription} item xs={12}>
 							<ul>
 								{this.props.description.map(desc => <li>{desc}</li>)}
 							</ul>

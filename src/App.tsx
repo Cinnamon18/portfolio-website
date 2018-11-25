@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Grid } from '@material-ui/core';
 import Header from './Components/Header';
 import MainBody from './Components/MainBody';
+import styles from './App.module.scss';
 
 class App extends Component {
 
@@ -11,10 +11,10 @@ class App extends Component {
 
 	render(): JSX.Element {
 		return (
-			<div className="App">
-				<header className="App-header">
+			<div className={styles.App}>
+				<header className={styles.AppHeader}>
 				</header>
-				<body>
+				<div>
 					<Grid
 						container
 						direction="row"
@@ -35,7 +35,7 @@ class App extends Component {
 					{/* <Button variant="contained" color="primary">
 						Hello World
     				</Button> */}
-				</body>
+				</div>
 			</div>
 		);
 	}

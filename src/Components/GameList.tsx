@@ -1,6 +1,7 @@
 import React from "react";
 import { Component } from "react";
 import Game, { IGameProps } from "./Game";
+import styles from './GameList.module.scss';
 
 export default class GameList extends Component {
 
