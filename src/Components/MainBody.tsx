@@ -7,7 +7,7 @@ export default class MainBody extends Component {
 
 	render(): JSX.Element {
 		return (
-			<div>
+			<div className="GameListHolder">
 				<GameList />
 			</div>
 		);

@@ -17,7 +17,7 @@ export default class GameList extends Component {
 	private static readonly pathToHarmony: IGameProps = {
 		description: [
 			"Lead a team of 20 to create a turn based tactics game",
-			"asdf",
+			"asdf",		
 		],
 		link: {
 			destination: "vgdev.org"
@@ -27,5 +27,6 @@ export default class GameList extends Component {
 		},
 		date: "December 2018",
 		name: "Path to Harmony",
+		key: "1",
 	};
 }

@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
 import './App.css';
 import { Grid } from '@material-ui/core';
-import Sidebar from './Components/Sidebar';
+import Header from './Components/Header';
 import MainBody from './Components/MainBody';
 
 class App extends Component {
 
 	//TODO
-	private static readonly RESUME_LINK = "TODO";
-
+	private static readonly RESUME_LINK = "/res/KalokAResume.pdf";
 
 	render(): JSX.Element {
 		return (
@@ -20,16 +18,16 @@ class App extends Component {
 					<Grid
 						container
 						direction="row"
-						justify="space-between"
+						justify="center"
 						alignItems="flex-start"
 						spacing={16}>
-						{/*TODO: do this differently on mobile. . make it reponsive */}
-						<Grid item xs={3}>
-							<Sidebar
+						{/* .TODO: do this differently on mobile. . make it reponsive */}
+						<Grid item xs={12}>
+							<Header
 								resumeLink = {App.RESUME_LINK}
 							/>
 						</Grid>
-						<Grid item xs={9}>
+						<Grid item xs={12}>
 							<MainBody />
 						</Grid>
 					</Grid>

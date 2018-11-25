@@ -1,0 +1,12 @@
+.HeaderList {
+	white-space:nowrap; 
+	li {
+		list-style-type: none;
+		display:inline; 
+	}
+	.Links {
+		> * {
+			//Style the buttons
+		}
+	}
+}
