@@ -1,12 +1,16 @@
 .HeaderList {
-	white-space:nowrap; 
-	li {
-		list-style-type: none;
-		display:inline; 
-	}
-	.Links {
-		> * {
-			//Style the buttons
-		}
-	}
+    white-space: nowrap;
+    >* {
+        margin: 8px;
+    }
+    li {
+        list-style-type: none;
+        display: inline;
+    }
+    .Links {
+        display: inline;
+        >* {
+            //Style the buttons
+        }
+    }
 }

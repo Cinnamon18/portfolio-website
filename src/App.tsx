@@ -12,30 +12,26 @@ class App extends Component {
 	render(): JSX.Element {
 		return (
 			<div className={styles.App}>
-				<header className={styles.AppHeader}>
-				</header>
-				<div>
-					<Grid
-						container
-						direction="row"
-						justify="center"
-						alignItems="flex-start"
-						spacing={16}>
-						{/* .TODO: do this differently on mobile. . make it reponsive */}
-						<Grid item xs={12}>
-							<Header
-								resumeLink = {App.RESUME_LINK}
-							/>
-						</Grid>
-						<Grid item xs={12}>
-							<MainBody />
-						</Grid>
+				<Grid
+					container
+					direction="row"
+					justify="center"
+					alignItems="flex-start"
+					spacing={8}>
+					{/* .TODO: do this differently on mobile. . make it reponsive */}
+					<Grid item xs={12}>
+						<Header
+							resumeLink={App.RESUME_LINK}
+						/>
 					</Grid>
+					<Grid item xs={12}>
+						<MainBody />
+					</Grid>
+				</Grid>
 
-					{/* <Button variant="contained" color="primary">
+				{/* <Button variant="contained" color="primary">
 						Hello World
     				</Button> */}
-				</div>
 			</div>
 		);
 	}

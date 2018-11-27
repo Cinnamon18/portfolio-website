@@ -7,6 +7,7 @@ export default class GameList extends Component {
 
 	private gameListProps: IGameProps[] = [
 		GameList.pathToHarmony,
+		GameList.dreamworld,
 	]
 
 	render(): JSX.Element[] {
@@ -21,7 +22,7 @@ export default class GameList extends Component {
 			"asdf",		
 		],
 		link: {
-			destination: "vgdev.org"
+			destination: "https://github.com/Cinnamon18/PathToHarmony/Builds"
 		},
 		preview: {
 
@@ -29,5 +30,22 @@ export default class GameList extends Component {
 		date: "December 2018",
 		name: "Path to Harmony",
 		key: "1",
+	};
+
+	private static readonly dreamworld: IGameProps = {
+		description: [
+			"created environmetn art",
+			"asdf",		
+		],
+		link: {
+			linkText: "Play Online",
+			destination: "https://revengeracer.itch.io/dreamworld"
+		},
+		preview: {
+
+		},
+		date: "June 2017",
+		name: "Dreamworld",
+		key: "2",
 	};
 }

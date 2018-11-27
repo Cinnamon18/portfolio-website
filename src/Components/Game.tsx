@@ -26,12 +26,12 @@ export default class Game extends Component<IGameProps> {
 				alignItems="flex-start"
 				spacing={16}
 			>
-				<Grid item xs={8}>
+				<Grid item xs={7}>
 					<GamePreview
 						{...this.props.preview}
 					/>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item xs={5}>
 					<Grid
 						container
 						direction="row"
@@ -47,7 +47,7 @@ export default class Game extends Component<IGameProps> {
 						</Grid>
 						<Grid className={styles.GameDescription} item xs={12}>
 							<ul>
-								{this.props.description.map(desc => <li>{desc}</li>)}
+								{this.props.description.map(desc => <li key={desc}>{desc}</li>)}
 							</ul>
 							<LinkButton
 								{...this.props.link}

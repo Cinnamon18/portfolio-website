@@ -19,6 +19,7 @@ export default class Header extends Component<IHeaderProps> {
 					<div className={styles.Links}>
 						<Button
 							variant="outlined"
+							color="primary"
 							onClick={() => { window.open(this.props.resumeLink) }}
 						>
 							Resume

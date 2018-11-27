@@ -17,9 +17,13 @@ export default class LinkButton extends Component<ILinkButtonProps> {
 		let linkText: string = (this.props.linkText) ? this.props.linkText : LinkButton.DEFAULT_TEXT;
 
 		return (
-			<Button variant="contained" href={this.props.destination}>
-				<p>{linkText}</p>
-		  	</Button>
+			<Button
+				variant="outlined"
+				color="primary"
+				href={this.props.destination}
+			>
+				<div>{linkText}</div>
+			</Button>
 		);
 	}
 }

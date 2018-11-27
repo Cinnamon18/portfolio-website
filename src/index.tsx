@@ -6,19 +6,23 @@ import * as serviceWorker from './serviceWorker';
 import { CssBaseline } from '@material-ui/core';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-ReactDOM.render(MyApp(), document.getElementById('root'));
-
 const theme = createMuiTheme({
 	palette: {
 		primary: {
-			// light: ,
-			main: '#ff4400',
-			// dark: ,
+			// light: '#eed1ff',
+			main: '#bba0e5',
+			dark: '#a38cd8',
 			// contrastText: ,
 		},
 		secondary: {
+			light: '#deecff',
+			main: '#acbae5',
+			dark: '#90ace5',
+			// contrastText: ,
+		},
+		error: {
 			// light: ,
-			main: '#AA00CC',
+			main: '#d836d3',
 			// dark: ,
 			// contrastText: ,
 		},
@@ -45,10 +49,12 @@ const theme = createMuiTheme({
 // CustomCheckbox = withStyles(styles)(CustomCheckbox);
 {/* <CustomCheckbox /> */}
 
+ReactDOM.render(MyApp(), document.getElementById('root'));
+
 function MyApp() {
 	return (
 		<React.Fragment>
-			<CssBaseline />
+			{/* <CssBaseline /> */}
 			<MuiThemeProvider theme={theme}>
 				<App />
 			</MuiThemeProvider>
