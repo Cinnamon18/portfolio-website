@@ -14,7 +14,6 @@ export default class Header extends Component<IHeaderProps> {
 			<div>
 				<h2>Alice Kalok</h2>
 				<ul className={styles.HeaderList}>
-					<li>(415)-562-0259</li>
 					<li>alice.ava.moh@gmail.com</li>
 					<div className={styles.Links}>
 						<Button
