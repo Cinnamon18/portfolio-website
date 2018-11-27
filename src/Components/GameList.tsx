@@ -19,13 +19,15 @@ export default class GameList extends Component {
 	private static readonly pathToHarmony: IGameProps = {
 		description: [
 			"Lead a team of 20 to create a turn based tactics game",
-			"asdf",		
+			"asdf",
 		],
 		link: {
 			destination: "https://github.com/Cinnamon18/PathToHarmony/Builds"
 		},
 		preview: {
+			media: [
 
+			]
 		},
 		date: "December 2018",
 		name: "Path to Harmony",
@@ -35,14 +37,18 @@ export default class GameList extends Component {
 	private static readonly dreamworld: IGameProps = {
 		description: [
 			"created environmetn art",
-			"asdf",		
+			"asdf",
 		],
 		link: {
 			linkText: "Play Online",
 			destination: "https://revengeracer.itch.io/dreamworld"
 		},
 		preview: {
-
+			media: [
+				// { isVideo: false, src: "dreamworldVideo.mp4", previewImg: "dreamworld1.png"}
+				// { isVideo: false, src: "dreamworld1.png"},
+				// { isVideo: false, src: "dreamworld2.png"},
+			]
 		},
 		date: "June 2017",
 		name: "Dreamworld",
