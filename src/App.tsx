@@ -3,11 +3,9 @@ import { Grid } from '@material-ui/core';
 import Header from './Components/Header';
 import MainBody from './Components/MainBody';
 import styles from './App.module.scss';
+// import resumeLink from "./assets/KalokAResume.pdf";
 
 class App extends Component {
-
-	//TODO
-	private static readonly RESUME_LINK = "/res/KalokAResume.pdf";
 
 	render(): JSX.Element {
 		return (
@@ -21,7 +19,7 @@ class App extends Component {
 					{/* .TODO: do this differently on mobile. . make it reponsive */}
 					<Grid item xs={12}>
 						<Header
-							resumeLink={App.RESUME_LINK}
+							// resumeLink={resumeLink}
 						/>
 					</Grid>
 					<Grid item xs={12}>

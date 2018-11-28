@@ -2,6 +2,7 @@ import React from "react";
 import { Component } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import styles from './GamePreview.module.scss';
+import defaultImage from "../assets/defaultGamePreview.png";
 const Player = require('video-react');
 
 
@@ -17,7 +18,7 @@ export interface IGamePreviewProps {
 
 export default class GamePreview extends Component<IGamePreviewProps> {
 
-	private static readonly defaultImage: string = "assets/defaultGamePreview.png";
+	// private static readonly defaultImage: string = "assets/defaultGamePreview.png";
 
 	render(): JSX.Element {
 		return (
@@ -41,7 +42,7 @@ export default class GamePreview extends Component<IGamePreviewProps> {
 					})
 					:
 					<div>
-						<img src={GamePreview.defaultImage} />
+						<img src={defaultImage} />
 					</div>
 				}
 

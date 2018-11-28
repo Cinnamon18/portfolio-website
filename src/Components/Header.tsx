@@ -4,7 +4,7 @@ import { Button } from "@material-ui/core";
 import styles from './Header.module.scss';
 
 export interface IHeaderProps {
-	resumeLink: string;
+	resumeLink?: string;
 }
 
 export default class Header extends Component<IHeaderProps> {

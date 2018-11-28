@@ -1,6 +1,9 @@
 import React from "react";
 import { Component } from "react";
 import Game, { IGameProps } from "./Game";
+// import dreamworld1 from "../assets/dreamworld1.png";
+// import dreamworld2 from "../assets/dreamworld2.png";
+// import dreamworldVideo from "../assets/dreamworldVideo.mp4";
 import styles from './GameList.module.scss';
 
 export default class GameList extends Component {
@@ -45,9 +48,9 @@ export default class GameList extends Component {
 		},
 		preview: {
 			media: [
-				// { isVideo: false, src: "dreamworldVideo.mp4", previewImg: "dreamworld1.png"}
-				// { isVideo: false, src: "dreamworld1.png"},
-				// { isVideo: false, src: "dreamworld2.png"},
+				// { isVideo: false, src: dreamworldVideo, previewImg: dreamworld1},
+				// { isVideo: false, src: dreamworld1},
+				// { isVideo: false, src: dreamworld2},
 			]
 		},
 		date: "June 2017",
