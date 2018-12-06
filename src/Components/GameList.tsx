@@ -22,10 +22,9 @@ export default class GameList extends Component {
 	private static readonly pathToHarmony: IGameProps = {
 		description: [
 			"Lead a team of 20 to create a turn based tactics game",
-			"asdf",
 		],
 		link: {
-			destination: "https://github.com/Cinnamon18/PathToHarmony/Builds"
+			destination: "https://github.com/Cinnamon18/PathToHarmony/tree/master/Builds"
 		},
 		preview: {
 			media: [
@@ -39,8 +38,7 @@ export default class GameList extends Component {
 
 	private static readonly dreamworld: IGameProps = {
 		description: [
-			"created environmetn art",
-			"asdf",
+			"Created environment art",
 		],
 		link: {
 			linkText: "Play Online",
