@@ -26,12 +26,12 @@ export default class Game extends Component<IGameProps> {
 				alignItems="flex-start"
 				spacing={16}
 			>
-				<Grid item xs={7}>
+				<Grid item xs={12} md={7}>
 					<GamePreview
 						{...this.props.preview}
 					/>
 				</Grid>
-				<Grid item xs={5}>
+				<Grid item xs={12} md={5}>
 					<Grid
 						container
 						direction="row"

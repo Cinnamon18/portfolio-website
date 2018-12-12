@@ -26,10 +26,6 @@ class App extends Component {
 						<MainBody />
 					</Grid>
 				</Grid>
-
-				{/* <Button variant="contained" color="primary">
-						Hello World
-    				</Button> */}
 			</div>
 		);
 	}

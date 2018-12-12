@@ -3,8 +3,7 @@ import { Component } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import styles from './GamePreview.module.scss';
 import defaultImage from "../assets/defaultGamePreview.png";
-const Player = require('video-react');
-
+import { Player } from 'video-react';
 
 export interface IGamePreviewMedia {
 	isVideo: boolean;
@@ -18,9 +17,8 @@ export interface IGamePreviewProps {
 
 export default class GamePreview extends Component<IGamePreviewProps> {
 
-	// private static readonly defaultImage: string = "assets/defaultGamePreview.png";
-
 	render(): JSX.Element {
+
 		return (
 			<Carousel
 				emulateTouch={true}
@@ -28,24 +26,26 @@ export default class GamePreview extends Component<IGamePreviewProps> {
 				infiniteLoop={true}
 				transitionTime={500}
 			>
-				{this.props.media ?
-					this.props.media.map((media) => {
-						media.isVideo ?
-						<Player
-							src={media.src}
-							poster={media.previewImg}
-						/>
-						:
+				{
+					this.props.media.length == 0 ?
 						<div>
-							<img src={media.src}/>
+							<img src={defaultImage} />
 						</div>
-					})
-					:
-					<div>
-						<img src={defaultImage} />
-					</div>
+						:
+						this.props.media.map((mediaItem) => {
+							return (
+								mediaItem.isVideo ?
+									<Player
+										poster={mediaItem.previewImg}
+										src={mediaItem.src}
+									/>
+									:
+									<div>
+										<img src={mediaItem.src} />
+									</div>
+							);
+						})
 				}
-
 			</Carousel>
 		);
 	}

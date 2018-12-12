@@ -13,6 +13,7 @@
     "react-dom": "^16.6.3",
     "react-responsive-carousel": "^3.1.43",
     "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
     "typescript": "3.1.6",
     "video-react": "^0.13.1"
   },
@@ -30,5 +31,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "file-loader": "^2.0.0"
+  }
 }

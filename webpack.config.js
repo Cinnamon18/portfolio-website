@@ -43,14 +43,39 @@ const config = {
 					'sass-loader',
 					'scss-loader'
 				]
+			},
+			{
+				test: /\.(png|jpg|gif)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {}
+					}
+				]
+			},
+			{
+				test: /\.mp4$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							limit: 1000,
+							mimtetype: 'video/mp4',
+						}
+					}
+				]
+			},
+			{
+				test: /\.html$/,
+				use: 'html-loader?attrs[]=video:src'
 			}
 		],
-		loaders: [
-			{
-				test: /\.(png|jpg)$/,
-				loader: 'url?limit=25000'
-			}
-		]
+		// loaders: [
+		// 	{
+		// 		test: /\.(png|jpg)$/,
+		// 		loader: 'url?limit=25000'
+		// 	}
+		// ]
 
 	},
 	resolve: {
